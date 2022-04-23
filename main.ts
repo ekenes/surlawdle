@@ -11,7 +11,6 @@ function startGame () {
         maxGuesses = 1
     }
     promptForGuess(maxGuesses)
-    startGame()
 }
 function promptForGuess (numGuesses: number) {
     game.splash("You have", "" + numGuesses + " guesses")
@@ -66,3 +65,4 @@ dictionary = [
 "Dozer",
 "Jolly"
 ]
+startGame()
