@@ -1,18 +1,5 @@
 function startGame () {
-    dictionary = [
-    "Surlaw",
-    "Winston",
-    "Goldie",
-    "Russ",
-    "Wally",
-    "Shrimpy",
-    "Berg",
-    "Bard",
-    "Paul",
-    "Dozer",
-    "Jolly"
-    ]
-    answer = dictionary[randint(0, dictionary.length + 1)]
+    answer = dictionary.removeAt(randint(0, dictionary.length - 1))
     answerLength = answer.length
     if (answerLength == 4) {
         maxGuesses = 3
@@ -24,6 +11,7 @@ function startGame () {
         maxGuesses = 1
     }
     promptForGuess(maxGuesses)
+    startGame()
 }
 function promptForGuess (numGuesses: number) {
     game.splash("You have", "" + numGuesses + " guesses")
@@ -65,4 +53,16 @@ game.splash("Welcome to Surlawdle!")
 score = 0
 info.setScore(0)
 numStrikes = 0
-startGame()
+dictionary = [
+"Surlaw",
+"Winston",
+"Goldie",
+"Russ",
+"Wally",
+"Shrimpy",
+"Berg",
+"Bard",
+"Paul",
+"Dozer",
+"Jolly"
+]
