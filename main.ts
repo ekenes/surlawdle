@@ -17,7 +17,7 @@ function promptForGuess (numGuesses: number) {
     if ((game.askForString("Guess the name of a walrus", answer.length)).toLowerCase() == answer.toLowerCase() && numGuesses > 0) {
         score += 1
         info.changeScoreBy(1)
-        game.splash("Congratulations! You win! Your score is", score)
+        game.splash("You got it! Your score is ", score)
         if (score == 10) {
             game.over(true)
         }
